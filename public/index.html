@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="../public//styles/images/favicon.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="../public/styles/index.css" />
+    <title>Registration page</title>
+  </head>
+
+  <body>
+    <div class="registration-page">
+      <div id="modal" class="modal-close">
+        <div class="modal__wrapper">
+          <h1 class="modal__wrapper-title">Thank you for your registration!</h1>
+          <h1 class="modal__wrapper-subtitle">
+            You can now proceede to login.
+          </h1>
+        </div>
+
+        <button id="modal__close-button">OK</button>
+      </div>
+      <header class="header">
+        <h1 class="header__title">Registration page</h1>
+        <h2 class="header__subtitle">
+          Join us via
+        </h2>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <button id="phone-tab">
+                <img src="../public/styles/images/phone.svg" />
+              </button>
+            </li>
+            <li class="nav__list-item">
+              <span>Or</span>
+            </li>
+            <li class="nav__list-item">
+              <button id="email-tab">
+                <img src="../public/styles/images/email.svg" />
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="form-wrapper">
+        <form class="form" name="registration-form" novalidate method="POST">
+          <fieldset id="sign-up-field" class="form-field">
+            <legend class="form-field__title">
+              Phone number
+            </legend>
+            <input
+              class="input-text"
+              type="phone"
+              placeholder="Please enter your phone"
+              name="phone"
+              value="phone"
+            />
+          </fieldset>
+          <p class="error" id="error-msg"></p>
+          <fieldset class="form-field">
+            <legend class="form-field__title">Choose currency</legend>
+            <div class="radio-wrapper">
+              <input
+                type="radio"
+                id="currency-dollar"
+                name="currency"
+                value="dollar"
+                class="input-radio"
+                checked
+              />
+              <label for="currency-dollar"
+                >USD <span class="currency__symbol">(&dollar;)</span></label
+              >
+
+              <input
+                type="radio"
+                id="currency-euro"
+                name="currency"
+                value="euro"
+                class="input-radio"
+              />
+              <label for="currency-euro">
+                Euro
+                <span class="currency__symbol">(&euro;)</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form-field">
+            <input
+              type="checkbox"
+              name="terms-conditions"
+              id="terms-conditions"
+              class="input-checkbox"
+              value="accepted-terms"
+              checked
+            />
+            <label for="terms-conditions"
+              >I agree to the terms and conditions and the privacy policy</label
+            >
+          </fieldset>
+
+          <fieldset class="form-field">
+            <input
+              type="checkbox"
+              name="promo-notifications"
+              id="promo-notifications"
+              class="input-checkbox"
+              value="include-promo"
+            />
+            <label for="promo-notifications">Promo notifications</label>
+          </fieldset>
+
+          <button class="submit-button" type="submit">Sign Up</button>
+        </form>
+      </section>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
